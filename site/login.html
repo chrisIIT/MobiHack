@@ -4,6 +4,8 @@
     <head>
         <link rel="stylesheet" href="login.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
     </head>
     <body>
         <div id="welcome">
@@ -11,30 +13,36 @@
             <span class="white med" id="p1">Sign in below to plan some awesome events!</span>
             <br/>
             <br/>
-            <input type="text" placeholder="Username"><br/><br/><input class="style-1" type="text" placeholder="Password">
+            <input type="text" placeholder="Username" id="username"><br/><br/><input class="style-1" type="password" placeholder="Password" id="password">
             <br/>
             <br/>
-            <div id="sign" class="white med"><span id="sign-1">Sign In</span></div>
+            <div id="sign" class="white med"><span id="sign-1"onclick="signIn()">Sign In</span></div>
             <br/>
             <span class="white med" id="view-2">Don't have an account? Register with us!</span>
             <br/>
             <br/>
-            <div id="sign" class="white med"><span id="sign-2" onclick="goToReg()">Register</span></a></div>
+            <div id="sign" class="white med"><span id="sign-2" onclick="goToReg()">Register</span></div>
         </div>
             <script type="text/javascript">
                 function goToReg()
                 {
-                    window.open("registration.html","_self");
+                    window.location.href="registration.html";
                 }
                 function signIn()
                 {
+                    Parse.initialize("W4sLH42AvuGXqq1BnKUS12cIXuwRGjnW0r3cftjK", "bgcEBEkWp62KfOSPBnTQAsz0uxqrUY5j7GHO0HMD");
                     var username = document.getElementById("username").value;
                     var password = document.getElementById("password").value;
+
                     Parse.User.logIn(username, password, {
                         success: function(user) {
                             console.log(user);
+                            //sessionStorage.setItem()
+                        //   user.Promise.LogIn("asdf","asdf", null);
+                            window.location.href="friends.html";   
                             //enter url
-                            return true;
+                            //console.log("lol"+ Parse.User.getEmail());
+                            return true;   
                             },
                             error: function(user, error) {
                                 console.log(user +error);
