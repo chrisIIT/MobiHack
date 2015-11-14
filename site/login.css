@@ -6,18 +6,97 @@ body,html
     font-family: 'Open Sans', sans-serif;
 }
 html { 
-  background: url("images/beach.jpg") no-repeat center center fixed; 
+  background: url("images/beach2.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+body
+{
+    display:table;
+}
+
 .white
 {
     color:white;
 }
+.big
+{
+    font-weight:700;
+    font-size:70px;
+}
+.med
+{
+    font-size:25px;
+}
+.tshadow
+{
+    text-shadow: 3px 3px 8px rgba(150, 150, 150, 0.92);
+}
+#p1
+{
+    font-weight:500;
+    font-size:30px;
+}
 #welcome
 {
+
     text-align: center;
-    
+    display:table-cell;
+    vertical-align: middle;
 }
+#view-2
+{
+    background-color:black;
+    padding: 10px 10px 10px;
+    border-radius:5px;
+    background: rgba(0,0,0,0.3);
+}
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  background-color: transparent;
+  color:white;
+}
+ input[type="text"]:focus,
+ input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+    outline-color: white;
+}
+::-webkit-input-placeholder
+{
+    color:white;
+}
+#sign
+{
+    width:auto;
+}
+#sign-1
+{
+    padding: 2px 16px 6px 16px;
+    background-color:#3a8abb;
+}
+#sign-1:hover
+{
+    cursor: pointer;
+    background-color:#347ca8;
+}
+#sign-2
+{
+    padding: 2px 16px 6px 16px;
+    background-color:#46b863;
+}
+#sign-2:hover
+{
+    cursor: pointer;
+    background-color:#3fa559;
+}
+/*#sign-in
+{
+    text-align: center;
+    display:table-row;
+    width:auto;
+}*/
