@@ -1,19 +1,23 @@
 //
-//  MainController.m
+//  CreateEventPage.m
 //  Xcode file
 //
-//  Created by Alex Thompson on 11/13/15.
+//  Created by Alex Thompson on 11/14/15.
 //  Copyright © 2015 Davvid Caballero. All rights reserved.
 //
 
-#import "MainController.h"
+#import "CreateEventPage.h"
 
-@interface MainController ()
-@property (strong, nonatomic) IBOutlet UITableView *eventsTable;
+@interface CreateEventPage ()
+@property (strong, nonatomic) IBOutlet UITextField *eventNameField;
+@property (strong, nonatomic) IBOutlet UITextField *eventDesField;
+@property (strong, nonatomic) IBOutlet UITextField *eventLocationField;
+@property (strong, nonatomic) IBOutlet UIDatePicker *eventDateTimePicker;
+@property (strong, nonatomic) IBOutlet UITableView *friendsTable;
 
 @end
 
-@implementation MainController
+@implementation CreateEventPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];

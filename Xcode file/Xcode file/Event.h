@@ -13,6 +13,5 @@
 @property NSInteger *timeofEvent;
 @property NSDate *dateOfEvent;
 @property NSString *descriptionOfEvent;
-@property
 
 @end

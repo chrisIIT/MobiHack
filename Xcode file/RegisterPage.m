@@ -1,19 +1,18 @@
 //
-//  MainController.m
+//  RegisterPage.m
 //  Xcode file
 //
-//  Created by Alex Thompson on 11/13/15.
+//  Created by Alex Thompson on 11/14/15.
 //  Copyright © 2015 Davvid Caballero. All rights reserved.
 //
 
-#import "MainController.h"
+#import "RegisterPage.h"
 
-@interface MainController ()
-@property (strong, nonatomic) IBOutlet UITableView *eventsTable;
+@interface RegisterPage ()
 
 @end
 
-@implementation MainController
+@implementation RegisterPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];

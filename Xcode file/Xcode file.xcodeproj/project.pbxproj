@@ -20,6 +20,8 @@
 		2DFADAD91BF7092A008289E5 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAD81BF7092A008289E5 /* Event.m */; };
 		2DFADADC1BF70DA1008289E5 /* Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADADB1BF70DA1008289E5 /* Friends.m */; };
 		D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53AFBAD1BF6FA3F0088C5EE /* MainController.m */; };
+		D53AFBB41BF714AE0088C5EE /* CreateEventPage.m in Sources */ = {isa = PBXBuildFile; fileRef = D53AFBB31BF714AE0088C5EE /* CreateEventPage.m */; };
+		D53AFBB81BF71CB80088C5EE /* RegisterPage.m in Sources */ = {isa = PBXBuildFile; fileRef = D53AFBB71BF71CB80088C5EE /* RegisterPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		2DFADADB1BF70DA1008289E5 /* Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friends.m; sourceTree = "<group>"; };
 		D53AFBAC1BF6FA3F0088C5EE /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D53AFBAD1BF6FA3F0088C5EE /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		D53AFBB21BF714AE0088C5EE /* CreateEventPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEventPage.h; sourceTree = "<group>"; };
+		D53AFBB31BF714AE0088C5EE /* CreateEventPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEventPage.m; sourceTree = "<group>"; };
+		D53AFBB61BF71CB80088C5EE /* RegisterPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterPage.h; path = ../RegisterPage.h; sourceTree = "<group>"; };
+		D53AFBB71BF71CB80088C5EE /* RegisterPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterPage.m; path = ../RegisterPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +121,10 @@
 		2DFADA941BF6F26C008289E5 /* Xcode file */ = {
 			isa = PBXGroup;
 			children = (
+				D53AFBB51BF714C00088C5EE /* Views */,
 				2DFADADD1BF70F4A008289E5 /* Object Classes */,
 				2DFADA981BF6F26C008289E5 /* AppDelegate.h */,
-				D53AFBAC1BF6FA3F0088C5EE /* MainController.h */,
-				D53AFBAD1BF6FA3F0088C5EE /* MainController.m */,
 				2DFADA991BF6F26C008289E5 /* AppDelegate.m */,
-				2DFADA9B1BF6F26C008289E5 /* ViewController.h */,
-				2DFADA9C1BF6F26C008289E5 /* ViewController.m */,
 				2DFADA9E1BF6F26C008289E5 /* Main.storyboard */,
 				2DFADAA41BF6F26C008289E5 /* Assets.xcassets */,
 				2DFADAA61BF6F26C008289E5 /* LaunchScreen.storyboard */,
@@ -169,6 +172,21 @@
 				2DFADAD81BF7092A008289E5 /* Event.m */,
 			);
 			name = "Object Classes";
+			sourceTree = "<group>";
+		};
+		D53AFBB51BF714C00088C5EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D53AFBB61BF71CB80088C5EE /* RegisterPage.h */,
+				D53AFBB71BF71CB80088C5EE /* RegisterPage.m */,
+				D53AFBAC1BF6FA3F0088C5EE /* MainController.h */,
+				D53AFBAD1BF6FA3F0088C5EE /* MainController.m */,
+				2DFADA9B1BF6F26C008289E5 /* ViewController.h */,
+				2DFADA9C1BF6F26C008289E5 /* ViewController.m */,
+				D53AFBB21BF714AE0088C5EE /* CreateEventPage.h */,
+				D53AFBB31BF714AE0088C5EE /* CreateEventPage.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,9 +327,11 @@
 				2DFADAD61BF6FF76008289E5 /* User.m in Sources */,
 				2DFADA9A1BF6F26C008289E5 /* AppDelegate.m in Sources */,
 				D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */,
+				D53AFBB41BF714AE0088C5EE /* CreateEventPage.m in Sources */,
 				2DFADA971BF6F26C008289E5 /* main.m in Sources */,
 				2DFADAD91BF7092A008289E5 /* Event.m in Sources */,
 				2DFADADC1BF70DA1008289E5 /* Friends.m in Sources */,
+				D53AFBB81BF71CB80088C5EE /* RegisterPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
