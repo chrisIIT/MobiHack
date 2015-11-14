@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="244.5" y="313"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Page-->
         <scene sceneID="i9G-zr-YpH">
             <objects>
-                <viewController id="ooX-2T-L0D" sceneMemberID="viewController">
+                <viewController id="ooX-2T-L0D" customClass="RegisterPage" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d91-bM-YDY"/>
                         <viewControllerLayoutGuide type="bottom" id="H3b-wV-pSs"/>
@@ -114,7 +114,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="161" y="292" width="79" height="21"/>
+                                    <rect key="frame" x="159" y="273" width="79" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zay-6x-PMH">
@@ -122,7 +122,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="334" width="360" height="30"/>
+                                    <rect key="frame" x="20" y="311" width="360" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mck-6y-zhQ">
@@ -131,7 +131,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="161" y="436" width="74" height="21"/>
+                                    <rect key="frame" x="161" y="416" width="74" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yen-IA-CvX">
@@ -139,7 +139,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="465" width="360" height="30"/>
+                                    <rect key="frame" x="20" y="445" width="360" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VCa-eQ-aFX">
@@ -147,7 +147,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="532" width="360" height="30"/>
+                                    <rect key="frame" x="20" y="512" width="360" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uss-Jn-Uvg">
@@ -156,7 +156,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="127" y="503" width="146" height="21"/>
+                                    <rect key="frame" x="127" y="483" width="146" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-MK-0oE">
@@ -165,7 +165,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="178" y="369" width="45" height="21"/>
+                                    <rect key="frame" x="178" y="349" width="45" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyY-Q0-ls1">
@@ -173,7 +173,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="398" width="360" height="30"/>
+                                    <rect key="frame" x="20" y="378" width="360" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2L-dX-lqa">
@@ -182,7 +182,27 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="176" y="618" width="49" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="submitButtonPress:" destination="ooX-2T-L0D" eventType="touchUpInside" id="Zas-UW-7XV"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk2-EJ-q5h">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="180" y="550" width="41" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTz-Ju-jxJ">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="572" width="360" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -197,6 +217,8 @@
                                 <exclude reference="Ina-MK-0oE"/>
                                 <exclude reference="gyY-Q0-ls1"/>
                                 <exclude reference="x2L-dX-lqa"/>
+                                <exclude reference="jk2-EJ-q5h"/>
+                                <exclude reference="tTz-Ju-jxJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -211,9 +233,19 @@
                                 <include reference="Ina-MK-0oE"/>
                                 <include reference="gyY-Q0-ls1"/>
                                 <include reference="x2L-dX-lqa"/>
+                                <include reference="jk2-EJ-q5h"/>
+                                <include reference="tTz-Ju-jxJ"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="tTz-Ju-jxJ" id="Maj-Xc-TZF"/>
+                        <outlet property="nameField" destination="gyY-Q0-ls1" id="1fW-oa-d5V"/>
+                        <outlet property="passwordField" destination="yen-IA-CvX" id="okK-sO-9hG"/>
+                        <outlet property="repasswordField" destination="VCa-eQ-aFX" id="xmi-zJ-k98"/>
+                        <outlet property="submit" destination="x2L-dX-lqa" id="1pu-r0-gQE"/>
+                        <outlet property="usernameField" destination="Zay-6x-PMH" id="Nhc-Fl-Iwp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tr-qI-4zD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
