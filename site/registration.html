@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <title>Rendezvous</title>
+    <head>
+        <link rel="stylesheet" href="login.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+    </head>
+    <body>
+        <div id="welcome">
+            <p class="white big"> Register to Rendezvous</p>
+            <span class="white med" id="p1">Sign up below to plan some awesome events!</span>
+            <br/>
+            <br/>
+            <div id="data">
+            <input type="text" placeholder="Username" id="username"/><br/><br/><input class="style-1" type="password" placeholder="Password" id="password"/><br/><br/><input class="style-1" type="text" placeholder="Nick Name" id="nick"/><br/><br/><input class="style-1" type="text" placeholder="E-mail" id="email">
+            </div>
+            <br/>
+            <br/>
+            <div id="sign" class="white med"><span id="sign-3" onclick="signUp()">Sign Up</span></div>
+            <br/>
+            <span class="white med" id="view-2">Already have an account? Login <a href="login.html">Here!</a></span>
+            <br/>
+
+        </div>
+        <script type="text/javascript">
+            function signUp()
+            {
+                Parse.initialize("W4sLH42AvuGXqq1BnKUS12cIXuwRGjnW0r3cftjK", "bgcEBEkWp62KfOSPBnTQAsz0uxqrUY5j7GHO0HMD");
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var nick = document.getElementById("nick").value;
+        var email = document.getElementById("email").value;
+        var User = Parse.Object.extend("User");
+            var User = new User();
+            User.save({username:username,
+                      password: password,
+                     nick: nick,
+                       email:email},{success: function(object){$(".success").show();$('#data').text("Cool, check your email for verification.").css({opacity: 0, color:"white","font-size":"30px",height:"214px"}).animate({opacity: 1},300);
+                $("#sign-3").css({opacity: 1}).animate({opacity: 0},300);},error:function(model,error){$(".error").show();}});
+            }
+        </script>
+    </body>
+</html>
