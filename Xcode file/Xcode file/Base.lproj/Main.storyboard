@@ -100,6 +100,7 @@
                         <viewControllerLayoutGuide type="bottom" id="H3b-wV-pSs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pr6-Mb-wE1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-gN-rL8">
@@ -245,9 +246,11 @@
                         <outlet property="repasswordField" destination="VCa-eQ-aFX" id="xmi-zJ-k98"/>
                         <outlet property="submit" destination="x2L-dX-lqa" id="1pu-r0-gQE"/>
                         <outlet property="usernameField" destination="Zay-6x-PMH" id="Nhc-Fl-Iwp"/>
+                        <segue destination="a7C-BE-sVA" kind="unwind" identifier="loginUnwind" unwindAction="prepareForUnwind:" id="65j-aW-MgP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tr-qI-4zD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="a7C-BE-sVA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="244.5" y="1008.75"/>
         </scene>

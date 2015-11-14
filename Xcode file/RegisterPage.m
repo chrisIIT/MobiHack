@@ -7,6 +7,7 @@
 //
 
 #import "RegisterPage.h"
+#import <Parse/Parse.h>
 
 @interface RegisterPage ()
 @property (strong, nonatomic) IBOutlet UITextField *usernameField;
@@ -124,9 +125,7 @@
 
 
 - (IBAction)submitButtonPress:(id)sender {
-
-    
-    
+    [self registerUser];
     
 }
 
@@ -171,20 +170,22 @@
     [UIView commitAnimations];
 }
 
-- (void)myMethod {
-//    PFUser *user = [PFUser user];
-//    user.username = @"my name";
-//    user.password = @"my pass";
-//    user.email = @"email@example.com";
-//    
-//    // other fields can be set just like with PFObject
-//    user[@"phone"] = @"415-392-0202";
-//    
-//    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (!error) {   // Hooray! Let them use the app now.
-//        } else {   NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let the user try again.
-//        }
-//    }];
+- (void)registerUser {
+    PFUser *user = [PFUser user];
+    user.username = usernameField.text;
+    user.password = passwordField.text;
+    user.email = emailField.text;
+    
+    // other fields can be set just like with PFObject
+    user[@"nick"] = nameField.text;
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {   // Hooray! Let them use the app now.
+            [self performSegueWithIdentifier:@"loginUnwind" sender: NULL];
+            [self resignFirstResponder];
+        } else {   NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let the user try again.
+        }
+    }];
 }
 
 @end
