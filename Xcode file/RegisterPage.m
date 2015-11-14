@@ -75,25 +75,54 @@
     if([emailTest evaluateWithObject:self.emailField.text] == NO)
     {
         formDone = NO;
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"You must enter valid email address."
-                                                       delegate:self
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"Error!"
+                                      message:@"You must enter a valid email."
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okButton = [UIAlertAction
+                                   actionWithTitle:@"Okay"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action)
+                                   {
+                                       //Handel your yes please button action here
+                                       [alert dismissViewControllerAnimated:YES completion:nil];
+                                       
+                                   }];
+        
+        
+        [alert addAction:okButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
     }else{
         
         //Check if passwords match
         if (![passwordField.text isEqualToString:repasswordField.text]) {
             formDone = NO;
             passwordsMatchFlag = NO;
-//            passwordField.text = @"Password Different!";
-//            .textColor = [UIColor redColor];
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"Error!"
+                                          message:@"Passwords don't match!"
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* okButton = [UIAlertAction
+                                       actionWithTitle:@"Okay"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action)
+                                       {
+                                           //Handel your yes please button action here
+                                           [alert dismissViewControllerAnimated:YES completion:nil];
+                                           
+                                       }];
+            
+            
+            [alert addAction:okButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
             NSLog(@" password not the same");
         } else {
             passwordsMatchFlag = YES;
-//            passwordMatch1.text = @"Passwords Match!";
-//            passwordMatch1.textColor = [UIColor greenColor];
         }
     }
     
@@ -102,13 +131,27 @@
     if(([usernameField.text length] < 4||[passwordField.text length] < 4) && ([usernameField.text length] != 0||[passwordField.text length] != 0)){
         formDone = NO;
         if(!messageDisplayed){
-//            UIAlertActionStyle *alert = [[UIAlertActionStyle alloc] initWithTitle:@"Error"
-//                                                            message:@"Your username and password must be at least 4 characters long."
-//                                                           delegate:self
-//                                                  cancelButtonTitle:@"Ok"
-//                                                  otherButtonTitles:nil];
-//            [alert show];
-            NSLog(@" username not long enough");
+            
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"Error!"
+                                          message:@"Your username and password must be at least 4 characters long."
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* okButton = [UIAlertAction
+                                       actionWithTitle:@"Okay"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action)
+                                       {
+                                           //Handel your yes please button action here
+                                           [alert dismissViewControllerAnimated:YES completion:nil];
+                                           
+                                       }];
+            
+            
+            [alert addAction:okButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
         }
         messageDisplayed = YES;
     }
@@ -183,7 +226,28 @@
         if (!error) {   // Hooray! Let them use the app now.
             [self performSegueWithIdentifier:@"loginUnwind" sender: NULL];
             [self resignFirstResponder];
-        } else {   NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let the user try again.
+        } else {   NSString *errorString = [error userInfo][@"error"];
+            
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"Error!"
+                                          message:errorString
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* okButton = [UIAlertAction
+                                        actionWithTitle:@"Okay"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action)
+                                        {
+                                            //Handel your yes please button action here
+                                            [alert dismissViewControllerAnimated:YES completion:nil];
+                                            
+                                        }];
+
+            
+            [alert addAction:okButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
         }
     }];
 }
