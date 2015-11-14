@@ -18,6 +18,7 @@
 		2DFADABE1BF6F26C008289E5 /* Xcode_fileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADABD1BF6F26C008289E5 /* Xcode_fileUITests.m */; };
 		2DFADAD61BF6FF76008289E5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAD51BF6FF76008289E5 /* User.m */; };
 		2DFADAD91BF7092A008289E5 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAD81BF7092A008289E5 /* Event.m */; };
+		2DFADADC1BF70DA1008289E5 /* Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADADB1BF70DA1008289E5 /* Friends.m */; };
 		D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53AFBAD1BF6FA3F0088C5EE /* MainController.m */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		2DFADAD51BF6FF76008289E5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2DFADAD71BF7092A008289E5 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		2DFADAD81BF7092A008289E5 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		2DFADADA1BF70DA1008289E5 /* Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friends.h; sourceTree = "<group>"; };
+		2DFADADB1BF70DA1008289E5 /* Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friends.m; sourceTree = "<group>"; };
 		D53AFBAC1BF6FA3F0088C5EE /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D53AFBAD1BF6FA3F0088C5EE /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +115,7 @@
 		2DFADA941BF6F26C008289E5 /* Xcode file */ = {
 			isa = PBXGroup;
 			children = (
+				2DFADADD1BF70F4A008289E5 /* Object Classes */,
 				2DFADA981BF6F26C008289E5 /* AppDelegate.h */,
 				D53AFBAC1BF6FA3F0088C5EE /* MainController.h */,
 				D53AFBAD1BF6FA3F0088C5EE /* MainController.m */,
@@ -124,10 +128,6 @@
 				2DFADAA91BF6F26C008289E5 /* Info.plist */,
 				2DFADAA11BF6F26C008289E5 /* Xcode_file.xcdatamodeld */,
 				2DFADA951BF6F26C008289E5 /* Supporting Files */,
-				2DFADAD41BF6FF76008289E5 /* User.h */,
-				2DFADAD51BF6FF76008289E5 /* User.m */,
-				2DFADAD71BF7092A008289E5 /* Event.h */,
-				2DFADAD81BF7092A008289E5 /* Event.m */,
 			);
 			path = "Xcode file";
 			sourceTree = "<group>";
@@ -156,6 +156,19 @@
 				2DFADABF1BF6F26C008289E5 /* Info.plist */,
 			);
 			path = "Xcode fileUITests";
+			sourceTree = "<group>";
+		};
+		2DFADADD1BF70F4A008289E5 /* Object Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2DFADADA1BF70DA1008289E5 /* Friends.h */,
+				2DFADADB1BF70DA1008289E5 /* Friends.m */,
+				2DFADAD41BF6FF76008289E5 /* User.h */,
+				2DFADAD51BF6FF76008289E5 /* User.m */,
+				2DFADAD71BF7092A008289E5 /* Event.h */,
+				2DFADAD81BF7092A008289E5 /* Event.m */,
+			);
+			name = "Object Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +311,7 @@
 				D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */,
 				2DFADA971BF6F26C008289E5 /* main.m in Sources */,
 				2DFADAD91BF7092A008289E5 /* Event.m in Sources */,
+				2DFADADC1BF70DA1008289E5 /* Friends.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
