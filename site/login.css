@@ -94,6 +94,16 @@ input[type="text"] {
     cursor: pointer;
     background-color:#3fa559;
 }
+#sign-3
+{
+    padding: 2px 16px 6px 16px;
+    background-color:#46b863;
+}
+#sign-3:hover
+{
+    cursor: pointer;
+    background-color:#3fa559;
+}
 /*#sign-in
 {
     text-align: center;
