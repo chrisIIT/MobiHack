@@ -10,4 +10,17 @@
 
 @implementation Event
 
+-(void)removeFriendsInvited:(NSSet *)ob
+//for friend responce 0= has been invited
+//                    1= yes
+//                    2= no
+//                    3=maybe
+-(void)moveFriend:(Event *)thisEvent friend:(Friends *)friendToMove responce:(NSInteger *)friendResponce{
+    int theirResponce=friendResponce;
+    if(theirResponce == 0){
+        
+    }
+}
+
+
 @end
