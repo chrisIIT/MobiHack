@@ -1,14 +1,14 @@
 # Rendezvous
 
 # What We Need
-*Logo
-*Login -> Main Page (adding events) -> Specialized page
-*Finding people based on location
+*Logo <br>
+*Login -> Main Page (adding events) -> Specialized page <br>
+*Finding people based on location 
 
 # Integration
-*FB
-*LinkedIn
+*FB <br>
+*LinkedIn 
 
 # Future
-*Thank you's
+*Thank you's <br>
 *Comments on how it went 
