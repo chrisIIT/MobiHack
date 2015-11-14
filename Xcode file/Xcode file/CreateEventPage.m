@@ -15,9 +15,12 @@
 @property (strong, nonatomic) IBOutlet UIDatePicker *eventDateTimePicker;
 @property (strong, nonatomic) IBOutlet UITableView *friendsTable;
 
+
 @end
 
 @implementation CreateEventPage
+@synthesize currentUser;
+@synthesize eventNameField,eventDesField,eventLocationField,eventDateTimePicker;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface CreateEventPage : UIViewController
+@property User *currentUser;
 
 @end

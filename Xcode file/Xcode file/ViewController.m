@@ -60,7 +60,9 @@
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
-    
+    usernameField.text = @"" ;
+    passwordField.text = @"" ;
+    [self resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {

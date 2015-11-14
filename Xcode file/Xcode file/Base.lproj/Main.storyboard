@@ -296,7 +296,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8G2-qq-dkb"/>
                                     <barButtonItem title="New Event" width="129" id="ong-fg-9bH">
                                         <connections>
-                                            <segue destination="zXR-Mz-WTg" kind="show" id="aXz-Dn-xnX"/>
+                                            <action selector="newEventPress:" destination="ErN-ZK-pQV" id="Yk5-oR-cve"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Yj7-yq-Zth"/>
@@ -331,7 +331,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="4ht-AL-bHc"/>
                     <connections>
+                        <outlet property="NewEvent" destination="ong-fg-9bH" id="EXh-WV-KTA"/>
                         <outlet property="eventsTable" destination="dFw-Ur-Xaa" id="oGo-P2-pe2"/>
+                        <outlet property="newEvent" destination="ong-fg-9bH" id="gV5-i3-hAH"/>
+                        <outlet property="newEventButtonGo" destination="ong-fg-9bH" id="j7r-y0-7vB"/>
+                        <segue destination="zXR-Mz-WTg" kind="show" identifier="newEventSegue" id="e1t-wU-CGB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17j-lf-6tl" userLabel="First Responder" sceneMemberID="firstResponder"/>

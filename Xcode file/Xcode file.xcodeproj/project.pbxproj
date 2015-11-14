@@ -32,7 +32,6 @@
 		D53AFBCA1BF72F320088C5EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53AFBC91BF72F320088C5EE /* SystemConfiguration.framework */; };
 		D53AFBCC1BF72F580088C5EE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D53AFBCB1BF72F580088C5EE /* libz.tbd */; };
 		D53AFBCE1BF72F6C0088C5EE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D53AFBCD1BF72F6C0088C5EE /* libsqlite3.tbd */; };
-		D5696A9C1BF740CE0084D0F3 /* parse-library-1.9.1 in Resources */ = {isa = PBXBuildFile; fileRef = D5696A9B1BF740CE0084D0F3 /* parse-library-1.9.1 */; };
 		D5696AA41BF7410E0084D0F3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5696A9D1BF7410D0084D0F3 /* Bolts.framework */; };
 		D5696AA51BF7410E0084D0F3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5696A9E1BF7410D0084D0F3 /* Parse.framework */; };
 		D5696AA61BF7410E0084D0F3 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5696A9F1BF7410D0084D0F3 /* ParseCrashReporting.framework */; };
@@ -41,6 +40,7 @@
 		D5696AA91BF7410E0084D0F3 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5696AA21BF7410E0084D0F3 /* ParseTwitterUtils.framework */; };
 		D5696AAA1BF7410E0084D0F3 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5696AA31BF7410E0084D0F3 /* ParseUI.framework */; };
 		D5696AAC1BF7427C0084D0F3 /* p_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5696AAB1BF7427C0084D0F3 /* p_icon.jpg */; };
+		D5696AAF1BF747E00084D0F3 /* parse-library-1.9.1 in Resources */ = {isa = PBXBuildFile; fileRef = D5696AAE1BF747E00084D0F3 /* parse-library-1.9.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +100,6 @@
 		D53AFBC91BF72F320088C5EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D53AFBCB1BF72F580088C5EE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D53AFBCD1BF72F6C0088C5EE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		D5696A9B1BF740CE0084D0F3 /* parse-library-1.9.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.9.1"; sourceTree = "<group>"; };
 		D5696A9D1BF7410D0084D0F3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.9.1/Bolts.framework"; sourceTree = "<group>"; };
 		D5696A9E1BF7410D0084D0F3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.9.1/Parse.framework"; sourceTree = "<group>"; };
 		D5696A9F1BF7410D0084D0F3 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.9.1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
@@ -109,6 +108,7 @@
 		D5696AA21BF7410E0084D0F3 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.9.1/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
 		D5696AA31BF7410E0084D0F3 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.9.1/ParseUI.framework"; sourceTree = "<group>"; };
 		D5696AAB1BF7427C0084D0F3 /* p_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p_icon.jpg; sourceTree = "<group>"; };
+		D5696AAE1BF747E00084D0F3 /* parse-library-1.9.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.9.1"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,8 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				D53AFBCD1BF72F6C0088C5EE /* libsqlite3.tbd */,
-				D5696A9B1BF740CE0084D0F3 /* parse-library-1.9.1 */,
 				D53AFBCB1BF72F580088C5EE /* libz.tbd */,
+				D5696AAE1BF747E00084D0F3 /* parse-library-1.9.1 */,
 				D5696A9D1BF7410D0084D0F3 /* Bolts.framework */,
 				D5696A9E1BF7410D0084D0F3 /* Parse.framework */,
 				D5696A9F1BF7410D0084D0F3 /* ParseCrashReporting.framework */,
@@ -385,10 +385,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5696A9C1BF740CE0084D0F3 /* parse-library-1.9.1 in Resources */,
 				2DFADAA81BF6F26C008289E5 /* LaunchScreen.storyboard in Resources */,
 				2DFADAA51BF6F26C008289E5 /* Assets.xcassets in Resources */,
 				D5696AAC1BF7427C0084D0F3 /* p_icon.jpg in Resources */,
+				D5696AAF1BF747E00084D0F3 /* parse-library-1.9.1 in Resources */,
 				2DFADAA01BF6F26C008289E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

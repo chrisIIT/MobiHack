@@ -7,9 +7,11 @@
 //
 
 #import "MainController.h"
+#import "CreateEventPage.h"
 
 @interface MainController ()
 @property (strong, nonatomic) IBOutlet UITableView *eventsTable;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *NewEvent;
 
 @end
 
@@ -24,6 +26,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)newEventPress:(id)sender {
+    [self performSegueWithIdentifier: @"newEventSegue" sender:currentUser];
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([@"newEventSegue" isEqualToString:segue.identifier]) {
+        CreateEventPage *controller = (CreateEventPage *) segue.destinationViewController;
+        controller.currentUser = sender;
+    }
 }
 
 /*
