@@ -9,6 +9,7 @@
 #import "User.h"
 
 @implementation User
+
 @synthesize username,eventsCreated,eventsInvited,password;
 
 @end

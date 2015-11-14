@@ -16,6 +16,7 @@
 		2DFADAA81BF6F26C008289E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DFADAA61BF6F26C008289E5 /* LaunchScreen.storyboard */; };
 		2DFADAB31BF6F26C008289E5 /* Xcode_fileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAB21BF6F26C008289E5 /* Xcode_fileTests.m */; };
 		2DFADABE1BF6F26C008289E5 /* Xcode_fileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADABD1BF6F26C008289E5 /* Xcode_fileUITests.m */; };
+		2DFADAD61BF6FF76008289E5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAD51BF6FF76008289E5 /* User.m */; };
 		D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53AFBAD1BF6FA3F0088C5EE /* MainController.m */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		2DFADAB91BF6F26C008289E5 /* Xcode fileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xcode fileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFADABD1BF6F26C008289E5 /* Xcode_fileUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xcode_fileUITests.m; sourceTree = "<group>"; };
 		2DFADABF1BF6F26C008289E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DFADAD41BF6FF76008289E5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2DFADAD51BF6FF76008289E5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D53AFBAC1BF6FA3F0088C5EE /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D53AFBAD1BF6FA3F0088C5EE /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,10 +121,8 @@
 				2DFADAA91BF6F26C008289E5 /* Info.plist */,
 				2DFADAA11BF6F26C008289E5 /* Xcode_file.xcdatamodeld */,
 				2DFADA951BF6F26C008289E5 /* Supporting Files */,
-				2DFADACE1BF6FAA9008289E5 /* CreationPage.h */,
-				2DFADACF1BF6FAA9008289E5 /* CreationPage.m */,
-				2DFADAD11BF6FBD8008289E5 /* User.h */,
-				2DFADAD21BF6FBD8008289E5 /* User.m */,
+				2DFADAD41BF6FF76008289E5 /* User.h */,
+				2DFADAD51BF6FF76008289E5 /* User.m */,
 			);
 			path = "Xcode file";
 			sourceTree = "<group>";
@@ -285,10 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DFADAD01BF6FAA9008289E5 /* CreationPage.m in Sources */,
 				2DFADA9D1BF6F26C008289E5 /* ViewController.m in Sources */,
-				2DFADAD31BF6FBD8008289E5 /* User.m in Sources */,
 				2DFADAA31BF6F26C008289E5 /* Xcode_file.xcdatamodeld in Sources */,
+				2DFADAD61BF6FF76008289E5 /* User.m in Sources */,
 				2DFADA9A1BF6F26C008289E5 /* AppDelegate.m in Sources */,
 				D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */,
 				2DFADA971BF6F26C008289E5 /* main.m in Sources */,
