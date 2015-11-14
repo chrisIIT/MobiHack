@@ -17,6 +17,7 @@
 		2DFADAB31BF6F26C008289E5 /* Xcode_fileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAB21BF6F26C008289E5 /* Xcode_fileTests.m */; };
 		2DFADABE1BF6F26C008289E5 /* Xcode_fileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADABD1BF6F26C008289E5 /* Xcode_fileUITests.m */; };
 		2DFADAD61BF6FF76008289E5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAD51BF6FF76008289E5 /* User.m */; };
+		2DFADAD91BF7092A008289E5 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAD81BF7092A008289E5 /* Event.m */; };
 		D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53AFBAD1BF6FA3F0088C5EE /* MainController.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		2DFADABF1BF6F26C008289E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DFADAD41BF6FF76008289E5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2DFADAD51BF6FF76008289E5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2DFADAD71BF7092A008289E5 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		2DFADAD81BF7092A008289E5 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		D53AFBAC1BF6FA3F0088C5EE /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D53AFBAD1BF6FA3F0088C5EE /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +126,8 @@
 				2DFADA951BF6F26C008289E5 /* Supporting Files */,
 				2DFADAD41BF6FF76008289E5 /* User.h */,
 				2DFADAD51BF6FF76008289E5 /* User.m */,
+				2DFADAD71BF7092A008289E5 /* Event.h */,
+				2DFADAD81BF7092A008289E5 /* Event.m */,
 			);
 			path = "Xcode file";
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				2DFADA9A1BF6F26C008289E5 /* AppDelegate.m in Sources */,
 				D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */,
 				2DFADA971BF6F26C008289E5 /* main.m in Sources */,
+				2DFADAD91BF7092A008289E5 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

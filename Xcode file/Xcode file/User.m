@@ -12,4 +12,15 @@
 
 @synthesize username,eventsCreated,eventsInvited,password;
 
+-(void)changeUsername:(NSString *)newUsername{
+    username = newUsername;
+}
+
+-(void)changePassword:(NSString *)newPassword{
+    password=newPassword;
+}
+
+-(void)createEvent:(NSString *)eventName des: (NSString *)description :(NSNumber *) time{
+    
+}
 @end

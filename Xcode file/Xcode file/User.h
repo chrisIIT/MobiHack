@@ -13,5 +13,6 @@
 @property NSMutableArray *eventsCreated;
 @property NSMutableArray *eventsInvited;
 @property NSString *password;
-
+@property NSInteger *ID;
+@property 
 @end
