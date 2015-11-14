@@ -16,11 +16,13 @@
 @end
 
 @implementation MainController
-@synthesize currentUser;
+@synthesize currentUser,eventsTable;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",currentUser.nickname);
+    
+    eventsTable.delegate = self;
+    eventsTable.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,6 +44,38 @@
         CreateEventPage *returnFromController = (CreateEventPage *)segue.sourceViewController;
         currentUser = returnFromController.currentUser;
     }
+}
+
+
+//Table view methods
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    if(currentUser.eventsInvited != nil){
+    return [currentUser.eventsCreated count];
+    }
+    return 1;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventsList"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] init];
+    }
+    
+    cell.textLabel.text = @"Test";//[currentUser.eventsCreated objectAtIndex:indexPath.row] ;
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 /*
