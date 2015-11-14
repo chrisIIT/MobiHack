@@ -37,6 +37,13 @@
     }
 }
 
+-(IBAction)returnHome:(UIStoryboardSegue *)segue {
+    if ([segue.identifier isEqualToString:@"returnHome"]) {
+        CreateEventPage *returnFromController = (CreateEventPage *)segue.sourceViewController;
+        currentUser = returnFromController.currentUser;
+    }
+}
+
 /*
 #pragma mark - Navigation
 

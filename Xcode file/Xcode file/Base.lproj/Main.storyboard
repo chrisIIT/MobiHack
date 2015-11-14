@@ -334,7 +334,6 @@
                         <outlet property="NewEvent" destination="ong-fg-9bH" id="EXh-WV-KTA"/>
                         <outlet property="eventsTable" destination="dFw-Ur-Xaa" id="oGo-P2-pe2"/>
                         <outlet property="newEvent" destination="ong-fg-9bH" id="gV5-i3-hAH"/>
-                        <outlet property="newEventButtonGo" destination="ong-fg-9bH" id="j7r-y0-7vB"/>
                         <segue destination="zXR-Mz-WTg" kind="show" identifier="newEventSegue" id="e1t-wU-CGB"/>
                     </connections>
                 </viewController>
@@ -368,12 +367,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qHw-ug-oXe">
-                                <rect key="frame" x="20" y="148" width="343" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-sv-A8W">
                                 <rect key="frame" x="0.0" y="215" width="379" height="114"/>
                                 <animations/>
@@ -414,15 +407,6 @@
                                     <rect key="frame" x="0.0" y="432" width="380" height="198"/>
                                 </variation>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRP-Al-9wy">
-                                <rect key="frame" x="19" y="87" width="344" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="EventName:" destination="zXR-Mz-WTg" eventType="editingDidEnd" id="HrK-Br-gI8"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zb-jq-yUw">
                                 <rect key="frame" x="163" y="384" width="57" height="21"/>
                                 <animations/>
@@ -442,14 +426,6 @@
                                     <rect key="frame" x="156" y="186" width="72" height="22"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NsN-hz-8XN">
-                                <rect key="frame" x="20" y="148" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="209" width="344" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-Eo-fvD">
                                 <rect key="frame" x="182" y="656" width="37" height="30"/>
                                 <animations/>
@@ -457,33 +433,67 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="173" y="638" width="38" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="donePress:" destination="zXR-Mz-WTg" eventType="touchUpInside" id="Oar-2t-7et"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ej-lZ-4fo">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="93" width="352" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4O-5H-JbY">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="148" width="352" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Gj-uF-Cdq">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="216" width="352" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="zJV-A7-v0V"/>
-                                <exclude reference="NsN-hz-8XN"/>
+                                <exclude reference="8Ej-lZ-4fo"/>
+                                <exclude reference="Y4O-5H-JbY"/>
+                                <exclude reference="1Gj-uF-Cdq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="zJV-A7-v0V"/>
-                                <include reference="NsN-hz-8XN"/>
+                                <include reference="8Ej-lZ-4fo"/>
+                                <include reference="Y4O-5H-JbY"/>
+                                <include reference="1Gj-uF-Cdq"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="P8b-4p-nFV"/>
                     <connections>
+                        <outlet property="doneButoon" destination="FDW-Eo-fvD" id="XRI-qu-vtX"/>
                         <outlet property="eventDateTimePicker" destination="ufb-sv-A8W" id="Wzc-b7-6nM"/>
-                        <outlet property="eventDesField" destination="qHw-ug-oXe" id="jcU-pc-QkJ"/>
-                        <outlet property="eventLocationField" destination="NsN-hz-8XN" id="3MN-EH-6YJ"/>
-                        <outlet property="eventNameField" destination="qRP-Al-9wy" id="kI3-1v-Vj5"/>
+                        <outlet property="eventDesField" destination="Y4O-5H-JbY" id="GMP-eW-4nP"/>
+                        <outlet property="eventLocationField" destination="1Gj-uF-Cdq" id="sxv-x4-YTQ"/>
+                        <outlet property="eventNameField" destination="8Ej-lZ-4fo" id="wVm-JB-aqx"/>
                         <outlet property="friendsTable" destination="bOL-pF-n8g" id="AHo-59-FfB"/>
+                        <segue destination="65J-4z-VmQ" kind="unwind" identifier="returnHome" unwindAction="returnHome:" id="V5a-56-4uZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1g-6q-KtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="65J-4z-VmQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1741.5" y="312"/>
         </scene>

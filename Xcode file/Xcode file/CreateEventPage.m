@@ -14,32 +14,50 @@
 @property (strong, nonatomic) IBOutlet UITextField *eventLocationField;
 @property (strong, nonatomic) IBOutlet UIDatePicker *eventDateTimePicker;
 @property (strong, nonatomic) IBOutlet UITableView *friendsTable;
+@property (strong, nonatomic) IBOutlet UIButton *doneButoon;
 
 
 @end
 
 @implementation CreateEventPage
 @synthesize currentUser;
-@synthesize eventNameField,eventDesField,eventLocationField,eventDateTimePicker;
+@synthesize eventNameField,eventDesField,eventLocationField,eventDateTimePicker,doneButoon;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@"%@",currentUser.nickname);
+    eventNameField.delegate = self;
+    eventLocationField.delegate = self;
+    eventDesField.delegate = self;
+    [doneButoon setEnabled:NO];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    
+}
+- (IBAction)donePress:(id)sender {
+
+    
+    [self performSegueWithIdentifier:@"returnHome" sender:currentUser];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)checkFields{
+    if ([eventNameField.text length] == 0) {
+        return;
+    } else if ([eventLocationField.text length] == 0) {
+        return;
+    }
+    [doneButoon setEnabled:YES];
 }
-*/
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [eventLocationField resignFirstResponder];
+    [eventDesField resignFirstResponder];
+    [eventNameField resignFirstResponder];
+    [self checkFields];
+    return YES;
+}
 
 @end
