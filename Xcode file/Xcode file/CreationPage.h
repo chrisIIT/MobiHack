@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CreationPage.h
 //  Xcode file
 //
 //  Created by Davvid Caballero on 11/13/15.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface CreationPage : UIViewController
 
 @end
-
