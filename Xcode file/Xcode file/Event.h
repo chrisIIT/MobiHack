@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Friends.h"
+#import "User.h"
 
 @interface Event : NSObject
 @property NSString *nameOfEvent;
 @property NSInteger *timeofEvent;
 @property NSDate *dateOfEvent;
 @property NSString *descriptionOfEvent;
+@property NSMutableArray *friendsInvited;
+@property NSMutableArray *friendsGoing;
+@property NSMutableArray *friendsNotGoing;
+@property NSMutableArray *friendsMightGo;
+@property User *creatorOfEvent;
 
 @end
