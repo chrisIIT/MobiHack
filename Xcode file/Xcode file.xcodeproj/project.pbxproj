@@ -16,6 +16,7 @@
 		2DFADAA81BF6F26C008289E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DFADAA61BF6F26C008289E5 /* LaunchScreen.storyboard */; };
 		2DFADAB31BF6F26C008289E5 /* Xcode_fileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADAB21BF6F26C008289E5 /* Xcode_fileTests.m */; };
 		2DFADABE1BF6F26C008289E5 /* Xcode_fileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFADABD1BF6F26C008289E5 /* Xcode_fileUITests.m */; };
+		D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53AFBAD1BF6FA3F0088C5EE /* MainController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		2DFADAB91BF6F26C008289E5 /* Xcode fileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xcode fileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFADABD1BF6F26C008289E5 /* Xcode_fileUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xcode_fileUITests.m; sourceTree = "<group>"; };
 		2DFADABF1BF6F26C008289E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53AFBAC1BF6FA3F0088C5EE /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		D53AFBAD1BF6FA3F0088C5EE /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				2DFADA981BF6F26C008289E5 /* AppDelegate.h */,
+				D53AFBAC1BF6FA3F0088C5EE /* MainController.h */,
+				D53AFBAD1BF6FA3F0088C5EE /* MainController.m */,
 				2DFADA991BF6F26C008289E5 /* AppDelegate.m */,
 				2DFADA9B1BF6F26C008289E5 /* ViewController.h */,
 				2DFADA9C1BF6F26C008289E5 /* ViewController.m */,
@@ -279,6 +284,7 @@
 				2DFADA9D1BF6F26C008289E5 /* ViewController.m in Sources */,
 				2DFADAA31BF6F26C008289E5 /* Xcode_file.xcdatamodeld in Sources */,
 				2DFADA9A1BF6F26C008289E5 /* AppDelegate.m in Sources */,
+				D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */,
 				2DFADA971BF6F26C008289E5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +509,7 @@
 				2DFADAC41BF6F26C008289E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DFADAC51BF6F26C008289E5 /* Build configuration list for PBXNativeTarget "Xcode fileTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +518,7 @@
 				2DFADAC71BF6F26C008289E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DFADAC81BF6F26C008289E5 /* Build configuration list for PBXNativeTarget "Xcode fileUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +527,7 @@
 				2DFADACA1BF6F26C008289E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

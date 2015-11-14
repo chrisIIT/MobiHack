@@ -36,21 +36,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAZ-q5-6Xv">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="56" width="42" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueb-oI-coC">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="254" y="285" width="86" height="30"/>
                                 </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgq-v4-wVs">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="68" y="285" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="loginButtonOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AnH-Pm-Ivj"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Dy-6j-Uph">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
@@ -68,47 +69,53 @@
                                     <rect key="frame" x="35" y="220" width="317" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgq-v4-wVs">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Login"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAZ-q5-6Xv">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="285" width="46" height="30"/>
+                                    <rect key="frame" x="179" y="77" width="42" height="21"/>
                                 </variation>
-                            </button>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="MAZ-q5-6Xv"/>
                                 <exclude reference="Ueb-oI-coC"/>
+                                <exclude reference="sgq-v4-wVs"/>
                                 <exclude reference="5Dy-6j-Uph"/>
                                 <exclude reference="XLY-HL-RdT"/>
-                                <exclude reference="sgq-v4-wVs"/>
+                                <exclude reference="MAZ-q5-6Xv"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="MAZ-q5-6Xv"/>
                                 <include reference="Ueb-oI-coC"/>
+                                <include reference="sgq-v4-wVs"/>
                                 <include reference="5Dy-6j-Uph"/>
                                 <include reference="XLY-HL-RdT"/>
-                                <include reference="sgq-v4-wVs"/>
+                                <include reference="MAZ-q5-6Xv"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="cK2-iL-fEg"/>
                     <connections>
-                        <segue destination="ErN-ZK-pQV" kind="show" id="4mk-Bj-RlU"/>
+                        <outlet property="loginButton" destination="sgq-v4-wVs" id="hGS-Fl-7es"/>
+                        <outlet property="passwordField" destination="XLY-HL-RdT" id="Duz-Rd-xaF"/>
+                        <outlet property="registerButton" destination="Ueb-oI-coC" id="zAG-Ub-CAt"/>
+                        <outlet property="usernameField" destination="5Dy-6j-Uph" id="bqa-XI-drE"/>
+                        <segue destination="ErN-ZK-pQV" kind="show" identifier="homeSegue" id="4mk-Bj-RlU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="244.5" y="313"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Controller-->
         <scene sceneID="Woi-Cq-ORs">
             <objects>
-                <viewController id="ErN-ZK-pQV" sceneMemberID="viewController">
+                <viewController id="ErN-ZK-pQV" customClass="MainController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eMp-Co-rBh"/>
                         <viewControllerLayoutGuide type="bottom" id="b4Z-le-w9A"/>
@@ -120,7 +127,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8G2-qq-dkb"/>
-                                    <barButtonItem title="New Event" width="129" id="ong-fg-9bH"/>
+                                    <barButtonItem title="New Event" width="129" id="ong-fg-9bH">
+                                        <connections>
+                                            <segue destination="zXR-Mz-WTg" kind="show" id="aXz-Dn-xnX"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Yj7-yq-Zth"/>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -158,9 +169,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <segue destination="zXR-Mz-WTg" kind="show" id="QUg-kq-agi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17j-lf-6tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
