@@ -16,7 +16,7 @@
 //  1 = remove/add to going
 //  2 = remove/add to not going
 //  3 = remove/add to maybe going
--(void)removeFriendsInvited:(Event *)eventToRemoveFrom friend:(Friends *)friendToRemove arrayToRemoveFrom:(NSNumber *)removeFromHere{
+-(void)removeFriend:(Event *)eventToRemoveFrom friend:(Friends *)friendToRemove arrayToRemoveFrom:(NSNumber *)removeFromHere{
     int i;
     int toSwitch = [removeFromHere intValue];
 
@@ -38,15 +38,25 @@
             break;
     }
 }
-//for friend responce 0= has been invited
+//for friend responce 0= has been invited dont really need this since we only move if they replied to invitation 
 //                    1= yes
 //                    2= no
 //                    3=maybe
 -(void)moveFriend:(Event *)thisEvent friend: (Friends *)friendToMove responce:(NSNumber *) friendResponce {
     int theirResponce= [friendResponce intValue];
-    if(theirResponce == 0){
-        
+    if(theirResponce == 1){
+        [self removeFriend:thisEvent friend:friendToMove arrayToRemoveFrom:0];
+        [thisEvent.friendsGoing addObject:friendToMove];
     }
+    else if (theirResponce==2){
+        [self removeFriend:thisEvent friend:friendToMove arrayToRemoveFrom:0];
+        [thisEvent.friendsNotGoing addObject:friendToMove];
+    }
+    else{
+        [self removeFriend:thisEvent friend:friendToMove arrayToRemoveFrom:0];
+        [thisEvent.friendsMightGo addObject:friendToMove];
+    }
+
 }
 
 
