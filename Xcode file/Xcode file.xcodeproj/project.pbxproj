@@ -118,6 +118,10 @@
 				2DFADAA91BF6F26C008289E5 /* Info.plist */,
 				2DFADAA11BF6F26C008289E5 /* Xcode_file.xcdatamodeld */,
 				2DFADA951BF6F26C008289E5 /* Supporting Files */,
+				2DFADACE1BF6FAA9008289E5 /* CreationPage.h */,
+				2DFADACF1BF6FAA9008289E5 /* CreationPage.m */,
+				2DFADAD11BF6FBD8008289E5 /* User.h */,
+				2DFADAD21BF6FBD8008289E5 /* User.m */,
 			);
 			path = "Xcode file";
 			sourceTree = "<group>";
@@ -281,7 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFADAD01BF6FAA9008289E5 /* CreationPage.m in Sources */,
 				2DFADA9D1BF6F26C008289E5 /* ViewController.m in Sources */,
+				2DFADAD31BF6FBD8008289E5 /* User.m in Sources */,
 				2DFADAA31BF6F26C008289E5 /* Xcode_file.xcdatamodeld in Sources */,
 				2DFADA9A1BF6F26C008289E5 /* AppDelegate.m in Sources */,
 				D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */,
