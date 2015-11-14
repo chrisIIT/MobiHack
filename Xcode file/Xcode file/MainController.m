@@ -9,6 +9,7 @@
 #import "MainController.h"
 
 @interface MainController ()
+@property (strong, nonatomic) IBOutlet UITableView *eventsTable;
 
 @end
 
