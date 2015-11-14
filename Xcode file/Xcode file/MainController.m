@@ -14,10 +14,11 @@
 @end
 
 @implementation MainController
+@synthesize currentUser;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@"%@",currentUser.nickname);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <Parse/Parse.h>
+#import "User.h"
+#import "MainController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
@@ -28,7 +30,11 @@
     [PFUser logInWithUsernameInBackground: usernameField.text password:passwordField.text
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
-                                            [self performSegueWithIdentifier:@"homeSegue" sender: user];
+                                            User *tempUser = [[User alloc] init];
+                                            tempUser.username = user.username;
+                                            tempUser.nickname = user[@"nick"];
+                                            
+                                            [self performSegueWithIdentifier:@"homeSegue" sender: tempUser];
                                         } else {
                                             UIAlertController * alert=   [UIAlertController
                                                                           alertControllerWithTitle:@"Error!"
@@ -63,6 +69,14 @@
 }
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
     
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"homeSegue"]) {
+        MainController *controller = (MainController *) segue.destinationViewController;
+        controller.currentUser = sender;
+        
+    }
 }
 
 @end
