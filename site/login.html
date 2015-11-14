@@ -8,7 +8,7 @@
     <body>
         <div id="welcome">
             <p class="white big"> Welcome to Rendezvous</p>
-            <span class="white med" id="p1">Sign up below to plan some awesome events!</span>
+            <span class="white med" id="p1">Sign in below to plan some awesome events!</span>
             <br/>
             <br/>
             <input type="text" placeholder="Username"><br/><br/><input class="style-1" type="text" placeholder="Password">
@@ -19,7 +19,29 @@
             <span class="white med" id="view-2">Don't have an account? Register with us!</span>
             <br/>
             <br/>
-            <div id="sign" class="white med"><a href="registration.html"><span id="sign-2">Register</span></a></div>
+            <div id="sign" class="white med"><span id="sign-2" onclick="goToReg()">Register</span></a></div>
         </div>
+            <script type="text/javascript">
+                function goToReg()
+                {
+                    window.open("registration.html","_self");
+                }
+                function signIn()
+                {
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+                    Parse.User.logIn(username, password, {
+                        success: function(user) {
+                            console.log(user);
+                            //enter url
+                            return true;
+                            },
+                            error: function(user, error) {
+                                console.log(user +error);
+                                return false;
+                            }
+                    });
+                }
+        </script>
     </body>
 </html>
