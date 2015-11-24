@@ -24,6 +24,8 @@
 @synthesize passwordField,usernameField;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    passwordField.delegate = self;
+    usernameField.delegate = self;
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (IBAction)loginButtonOnPress:(id)sender {
@@ -33,12 +35,20 @@
                                             User *tempUser = [[User alloc] init];
                                             tempUser.username = user.username;
                                             tempUser.nickname = user[@"nick"];
+                                            tempUser.friendsArray = user[@"friends"];
+                                            tempUser.eventsInvited = user[@"eventsInvited"];
+                                            tempUser.eventsCreated = user[@"eventsCreated"];
                                             
-                                            [self performSegueWithIdentifier:@"homeSegue" sender: tempUser];
+                                            NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:tempUser];
+                                            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                                            [defaults setObject:encodedObject forKey:@"nsUser"];
+                                            [defaults synchronize];
+                                            
+                                            [self performSegueWithIdentifier:@"homeSegue" sender: NULL];//tempUser];
                                         } else {
                                             UIAlertController * alert=   [UIAlertController
                                                                           alertControllerWithTitle:@"Error!"
-                                                                          message:@"Usernam/Password Incorrect!"
+                                                                          message:@"Username/Password Incorrect!"
                                                                           preferredStyle:UIAlertControllerStyleAlert];
                                             
                                             UIAlertAction* okButton = [UIAlertAction
@@ -72,13 +82,46 @@
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
     
 }
+//
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if ([segue.identifier isEqualToString:@"homeSegue"]) {
+//        MainController *controller = (MainController *) segue.destinationViewController;
+//        controller.currentUser = sender;
+//        
+//    }
+//}
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"homeSegue"]) {
-        MainController *controller = (MainController *) segue.destinationViewController;
-        controller.currentUser = sender;
-        
-    }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [usernameField resignFirstResponder];
+    [passwordField resignFirstResponder];
+    return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    [self animateTextField:textField up:YES];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self animateTextField:textField up:NO];
+}
+
+-(void)animateTextField:(UITextField*)textField up:(BOOL)up {
+    int movementDistance;
+    float movementDuration;
+    
+
+        movementDistance = -150; // tweak as needed
+        movementDuration = 0.3f; // tweak as needed
+    
+    
+    int movement = (up ? movementDistance : -movementDistance);
+    
+    [UIView beginAnimations: @"animateTextField" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
 }
 
 @end

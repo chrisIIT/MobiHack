@@ -30,9 +30,6 @@
                 }
             }
             break;
-        case 1:
-            
-            break;
             
         default:
             break;
@@ -57,6 +54,19 @@
         [thisEvent.friendsMightGo addObject:friendToMove];
     }
 
+}
+
++(Event *)createEvent:(NSString *)eventName des:(NSString *)description eventDate:(NSDate *)date eventTime:(NSInteger *)time PossibleAttendee:(NSMutableArray *)myFriends creator:(User *)event_Creater location:(NSString *)location{
+    Event *myEvent = [[Event alloc] init];
+    myEvent.nameOfEvent=eventName;
+    myEvent.descriptionOfEvent=description;
+    myEvent.dateOfEvent=date;
+    myEvent.timeofEvent=time;
+    myEvent.friendsInvited=myFriends;
+    myEvent.location = location;
+    //myEvent.creatorOfEvent=event_Creater;
+    
+    return myEvent;
 }
 
 
