@@ -75,6 +75,11 @@
 //            if(){
 //                
 //            }
+            //code to go back to homeslide
+//            AMSlideMenuMainViewController *mainVC = [self mainSlideMenu];
+//            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//            [mainVC openContentViewControllerForMenu:AMSlideMenuLeft atIndexPath:indexPath];
+            
             [self performSegueWithIdentifier:@"returnHome" sender:currentUser];
         } else {
             // There was a problem, check error.description

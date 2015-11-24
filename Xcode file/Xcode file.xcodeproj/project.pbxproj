@@ -53,6 +53,7 @@
 		D5954D941C04362700D5A626 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D8D1C04362700D5A626 /* UIViewController+AMSlideMenu.m */; };
 		D5954D971C04366800D5A626 /* SlideMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D961C04366800D5A626 /* SlideMenuVC.m */; };
 		D5954D991C0445FD00D5A626 /* settings-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D5954D981C0445FD00D5A626 /* settings-menu.png */; };
+		D5954DA41C04E26E00D5A626 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954DA31C04E26E00D5A626 /* ProfileView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		D5954D951C04366800D5A626 /* SlideMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuVC.h; sourceTree = "<group>"; };
 		D5954D961C04366800D5A626 /* SlideMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuVC.m; sourceTree = "<group>"; };
 		D5954D981C0445FD00D5A626 /* settings-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-menu.png"; sourceTree = "<group>"; };
+		D5954DA21C04E26E00D5A626 /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
+		D5954DA31C04E26E00D5A626 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,16 +273,8 @@
 		D53AFBB51BF714C00088C5EE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D53AFBB61BF71CB80088C5EE /* RegisterPage.h */,
-				D53AFBB71BF71CB80088C5EE /* RegisterPage.m */,
-				D53AFBAC1BF6FA3F0088C5EE /* MainController.h */,
-				D53AFBAD1BF6FA3F0088C5EE /* MainController.m */,
-				2DFADA9B1BF6F26C008289E5 /* ViewController.h */,
-				2DFADA9C1BF6F26C008289E5 /* ViewController.m */,
-				D53AFBB21BF714AE0088C5EE /* CreateEventPage.h */,
-				D53AFBB31BF714AE0088C5EE /* CreateEventPage.m */,
-				D5696AB61BF76DAE0084D0F3 /* ViewEvent.h */,
-				D5696AB71BF76DAE0084D0F3 /* ViewEvent.m */,
+				D5954DA11C04E24400D5A626 /* MainViews */,
+				D5954DA01C04E23100D5A626 /* SlideMenuViews */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -350,6 +345,32 @@
 				D5954D8D1C04362700D5A626 /* UIViewController+AMSlideMenu.m */,
 			);
 			name = AMSlideMenu;
+			sourceTree = "<group>";
+		};
+		D5954DA01C04E23100D5A626 /* SlideMenuViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5954DA21C04E26E00D5A626 /* ProfileView.h */,
+				D5954DA31C04E26E00D5A626 /* ProfileView.m */,
+			);
+			name = SlideMenuViews;
+			sourceTree = "<group>";
+		};
+		D5954DA11C04E24400D5A626 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				D53AFBB61BF71CB80088C5EE /* RegisterPage.h */,
+				D53AFBB71BF71CB80088C5EE /* RegisterPage.m */,
+				D53AFBAC1BF6FA3F0088C5EE /* MainController.h */,
+				D53AFBAD1BF6FA3F0088C5EE /* MainController.m */,
+				2DFADA9B1BF6F26C008289E5 /* ViewController.h */,
+				2DFADA9C1BF6F26C008289E5 /* ViewController.m */,
+				D53AFBB21BF714AE0088C5EE /* CreateEventPage.h */,
+				D53AFBB31BF714AE0088C5EE /* CreateEventPage.m */,
+				D5696AB61BF76DAE0084D0F3 /* ViewEvent.h */,
+				D5696AB71BF76DAE0084D0F3 /* ViewEvent.m */,
+			);
+			name = MainViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5954DA41C04E26E00D5A626 /* ProfileView.m in Sources */,
 				D5954D8E1C04362700D5A626 /* AMSlideMenuContentSegue.m in Sources */,
 				2DFADA9D1BF6F26C008289E5 /* ViewController.m in Sources */,
 				D5954D931C04362700D5A626 /* AMSlideMenuRightTableViewController.m in Sources */,

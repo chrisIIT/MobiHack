@@ -30,8 +30,8 @@
     eventsTable.dataSource = self;
     AddedEvents = NO;
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSData *encodedObject = [defaults objectForKey:@"nsUser"];
+    NSUserDefaults *nsUser = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [nsUser objectForKey:@"nsUser"];
     currentUser = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
     
     if(currentUser.eventsCreated != NULL){
@@ -108,7 +108,7 @@
         cell = [[UITableViewCell alloc] init];
     }
     if(currentUser.eventsCreated == NULL){
-    cell.textLabel.text = @"Add an Event!"; //[nameTableArray objectAtIndex:indexPath.row] ;
+    cell.textLabel.text = @"Add a Rendezvous!"; //[nameTableArray objectAtIndex:indexPath.row] ;
     }else{
         Event *tempEvent = currentUser.eventsCreated[indexPath.row];
         cell.textLabel.text = tempEvent.nameOfEvent;

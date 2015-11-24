@@ -16,6 +16,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *repasswordField;
 @property (strong, nonatomic) IBOutlet UITextField *emailField;
 @property (strong, nonatomic) IBOutlet UIButton *submit;
+@property (strong, nonatomic) IBOutlet UIImageView *userImage;
+@property (nonatomic) UIImagePickerController *imagePickerController;
+@property (strong, nonatomic) IBOutlet UIButton *changePhotoButton;
+
 
 
 @end
@@ -23,7 +27,7 @@
 @implementation RegisterPage{
     BOOL formDone, passwordsMatchFlag, messageDisplayed;
 }
-@synthesize usernameField,passwordField,nameField,repasswordField,emailField,submit;
+@synthesize usernameField,passwordField,nameField,repasswordField,emailField,submit,userImage,imagePickerController,changePhotoButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,6 +43,8 @@
     emailField.delegate = self;
     
     
+    
+    
     passwordField.secureTextEntry = YES;
     repasswordField.secureTextEntry = YES;
     
@@ -51,6 +57,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)userSelectingPicture:(id)sender {
+    imagePickerController = [[UIImagePickerController alloc]init];
+    [imagePickerController setDelegate:(id)self];
+    imagePickerController.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+        didFinishPickingImage:(UIImage *)image
+                  editingInfo:(NSDictionary *)editingInfo {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [userImage setImage:image];
+    [changePhotoButton setTitle:@"" forState:normal];
+}
 
 -(void)checkFields{
     if ([usernameField.text length] == 0) {
