@@ -52,6 +52,7 @@
 		D5954D931C04362700D5A626 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D8B1C04362700D5A626 /* AMSlideMenuRightTableViewController.m */; };
 		D5954D941C04362700D5A626 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D8D1C04362700D5A626 /* UIViewController+AMSlideMenu.m */; };
 		D5954D971C04366800D5A626 /* SlideMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D961C04366800D5A626 /* SlideMenuVC.m */; };
+		D5954D991C0445FD00D5A626 /* settings-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D5954D981C0445FD00D5A626 /* settings-menu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		D5954D8D1C04362700D5A626 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
 		D5954D951C04366800D5A626 /* SlideMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuVC.h; sourceTree = "<group>"; };
 		D5954D961C04366800D5A626 /* SlideMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuVC.m; sourceTree = "<group>"; };
+		D5954D981C0445FD00D5A626 /* settings-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-menu.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 			children = (
 				D5696ABB1BF778D60084D0F3 /* b_icon.jpg */,
 				D5696AAB1BF7427C0084D0F3 /* p_icon.jpg */,
+				D5954D981C0445FD00D5A626 /* settings-menu.png */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				2DFADAA81BF6F26C008289E5 /* LaunchScreen.storyboard in Resources */,
 				D5696ABC1BF778D60084D0F3 /* b_icon.jpg in Resources */,
 				2DFADAA51BF6F26C008289E5 /* Assets.xcassets in Resources */,
+				D5954D991C0445FD00D5A626 /* settings-menu.png in Resources */,
 				D5696AAC1BF7427C0084D0F3 /* p_icon.jpg in Resources */,
 				D5696AB51BF766030084D0F3 /* parse-library-1.9.1 in Resources */,
 				2DFADAA01BF6F26C008289E5 /* Main.storyboard in Resources */,

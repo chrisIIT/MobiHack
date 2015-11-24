@@ -39,6 +39,8 @@
     [friendsTable.layer setMasksToBounds:YES];
     [friendsTable.layer setBorderColor:[[UIColor darkGrayColor] CGColor]];
     
+    [self addLeftMenuButton];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -41,6 +41,7 @@
     locationName.text = event.location;
     time.text = prettyVersion;
     
+    [self addLeftMenuButton];
 }
 
 - (void)didReceiveMemoryWarning {

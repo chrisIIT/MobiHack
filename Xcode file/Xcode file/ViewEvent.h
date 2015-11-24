@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
+#import "UIViewController+AMSlideMenu.h"
 
 @interface ViewEvent : UIViewController
 @property Event* event;

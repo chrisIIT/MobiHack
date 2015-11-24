@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+-(void)viewWillDisappear:(BOOL)animated{
+    [self reloadInputViews];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -47,6 +50,61 @@
             break;
     }
     return identifier;
+}
+
+- (CGFloat)leftMenuWidth
+{
+    return 250;
+}
+
+- (CGFloat)rightMenuWidth
+{
+    return 180;
+}
+
+- (void)configureLeftMenuButton:(UIButton *)button
+{
+    CGRect frame = button.frame;
+    frame = CGRectMake(0, 0, 25, 25);
+    button.frame = frame;
+    [button setImage:[UIImage imageNamed:@"settings-menu.png"] forState:UIControlStateNormal];
+}
+
+- (void) configureSlideLayer:(CALayer *)layer
+{
+    layer.shadowColor = [UIColor blackColor].CGColor;
+    layer.shadowOpacity = 1;
+    layer.shadowOffset = CGSizeMake(0, 0);
+    layer.shadowRadius = 5;
+    layer.masksToBounds = NO;
+    layer.shadowPath =[UIBezierPath bezierPathWithRect:self.view.layer.bounds].CGPath;
+}
+
+- (UIViewAnimationOptions) openAnimationCurve {
+    return UIViewAnimationOptionCurveEaseOut;
+}
+
+- (UIViewAnimationOptions) closeAnimationCurve {
+    return UIViewAnimationOptionCurveEaseOut;
+}
+
+- (AMPrimaryMenu)primaryMenu
+{
+    return AMPrimaryMenuLeft;
+}
+
+
+// Enabling Deepnes on left menu
+- (BOOL)deepnessForLeftMenu
+{
+    return YES;
+}
+
+
+// Enabling darkness while left menu is opening
+- (CGFloat)maxDarknessWhileLeftMenu
+{
+    return 0.5;
 }
 
 

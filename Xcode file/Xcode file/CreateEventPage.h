@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "UIViewController+AMSlideMenu.h"
 
 @interface CreateEventPage : UIViewController
 @property User *currentUser;
