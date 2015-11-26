@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
     <title>Events</title>
     <head>
@@ -8,34 +8,30 @@
     </head>
     <body>
     <div id="header">
-        
         <img src="images/web_icon.jpg" id="logo">
             <!--<span id="user">Hello, User!</span>-->
-        
-        
         <img src="images/menu_hamburger-512.png" id="options">
         <img src="images/RPlus.png" id="plus" onclick="show()">
         <img src="images/RPlusB.png" id="plus2" onclick="show2()">
     </div>
-    <hr>
+    
     <div id="sidebar">
         <script>
             Parse.initialize("W4sLH42AvuGXqq1BnKUS12cIXuwRGjnW0r3cftjK", "bgcEBEkWp62KfOSPBnTQAsz0uxqrUY5j7GHO0HMD");
             console.log(Parse.User.current().getUsername());
-            
         </script>
         <h3 id ="t1">Add Friends</h3>
         <input type="text" placeholder="Search Friends" id="value"onkeydown="if (event.keyCode == 13) { go();show3();}" />
         <hr id="ta"width="95%"/>
         <h3>Friends</h3>
-        <p>Elvis Reyes</p>
+        <!--<p>Elvis Reyes</p>
         <p>Chris Sanders</p>
         <p>Alex Thompson</p>
-        <div id="person"></div>
+        <div id="person"></div> -->
     </div>
         
         <div id="event">
-            <h1>Create An Event</h1>
+            <h1>Create A Rendezvous</h1>
             Event Title:<input type="text" placeholder="Event Title" id="title"/><br/>
             Event Time:<input type="text" placeholder="Event Time" id="time"/><br/>
             Event Date:<input type="text" placeholder="Event Date" id="date"/><br/>
@@ -79,7 +75,6 @@
                     currentUser.save();
                     var p1 = number.get("username");
                     document.getElementById("person").innerHTML = p1;
-
                     
                 },
                 error: function(object, error) {

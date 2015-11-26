@@ -8,7 +8,24 @@ body,html
 }
 #header
 {
-    
+    background-color: skyblue;
+}
+#sidebar
+{
+    position: relative;
+    width:15%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    background-color:powderblue;
+}
+#event 
+{
+    position: relative;
+    width:85%;
+    float: right;
+    height:100%;
+    text-align: center;
 }
 #logo
 {
@@ -49,19 +66,7 @@ body,html
 {
     cursor:pointer;
 }
-#sidebar{
-    position: relative;
-    width:17%;
-    height: 100%;
-    float: left;
-    text-align: center;
-}
-#event {
-    position: relative;
-    width:75%;
-    float: right;
-    opacity:0;
-}
+
 #person
 {
     opacity:0;
