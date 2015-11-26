@@ -8,11 +8,14 @@
     </head>
     <body>
     <div id="header">
-        <img src="images/web_icon.jpg" id="logo">
+        <!--<img src="images/web_icon.jpg" id="logo">-->
             <!--<span id="user">Hello, User!</span>-->
-        <img src="images/menu_hamburger-512.png" id="options">
-        <img src="images/RPlus.png" id="plus" onclick="show()">
-        <img src="images/RPlusB.png" id="plus2" onclick="show2()">
+        <!--<img src="images/menu_hamburger-512.png" id="options"> -->
+        <!--<img src="images/RPlus.png" id="plus" onclick="show()"> -->
+        <!--<img src="images/RPlusB.png" id="plus2" onclick="show2()"> -->
+        <div id="change">Events</div>
+        <div id="add">+</div>
+        <input type="search" id="search" placeholder="Search Friends and Events..."/>
     </div>
     
     <div id="sidebar">
@@ -29,18 +32,20 @@
         <p>Alex Thompson</p>
         <div id="person"></div> -->
     </div>
-        
         <div id="event">
             <h1>Create A Rendezvous</h1>
-            Event Title:<input type="text" placeholder="Event Title" id="title"/><br/>
-            Event Time:<input type="text" placeholder="Event Time" id="time"/><br/>
-            Event Date:<input type="text" placeholder="Event Date" id="date"/><br/>
-            Event Description:<input type="text" placeholder="Event Description" id="desc"/><br/>
-            Friends:<br/><br/><input type="checkbox" id="fr1"/>Elvis Reyes<br/>
+            <span class="bold">Title:</span><input type="text" id="title" class="marg"/><br/><br/><br/>
+            <span class="bold">Time:</span><input type="text" id="time" class="marg"/><br/><br/><br/>
+            <span class="bold">Date:</span><input type="date" id="date" class="marg"/><br/><br/><br/>
+            <span class="bold">Description:</span><br><textarea placeholder="Tell them about it!" id="desc" cols="50" rows="10"></textarea><br/><br/>
+            <span class="bold">Location:</span><br>
+            Enter Address Below<br/>
+            <input type="text" id="address">
+            <!--Friends:<br/><br/><input type="checkbox" id="fr1"/>Elvis Reyes<br/> 
             <input type="checkbox" id="fr1"/>Chris Sanders<br/>
             <input type="checkbox" id="fr1"/>Alex Thompson<br/>
             <input type="checkbox" id="fr1"/>Davvid<br/>
-            <br/><input type="submit"/>
+            <br/><input type="submit"/> -->
         </div>
         <script>
             function show()

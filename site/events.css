@@ -8,7 +8,9 @@ body,html
 }
 #header
 {
-    background-color: skyblue;
+    position: relative;
+    background-color: #4FC3F7;
+    height:40px;
 }
 #sidebar
 {
@@ -17,20 +19,59 @@ body,html
     height: 100%;
     float: left;
     text-align: center;
-    background-color:powderblue;
+    background-color:#03A9F4  
 }
 #event 
 {
     position: relative;
-    width:85%;
-    float: right;
+    width:auto;
+    margin-left: 16%;
     height:100%;
-    text-align: center;
+}
+#desc
+{
+    vertical-align: top;
+}
+#date
+{
+    margin-left: 10px;
+}
+.marg
+{
+    margin-left: 5px;
+    vertical-align: bottom;
+}
+.bold
+{
+    font-weight: 600;
+}
+#change
+{
+    display:inline-block;  
+    background-color:#4CAF50;
+    padding: 3px;
+    border-radius: 2px;
+    color: white;
+    margin-left:20px;
+}
+#add
+{
+    display:inline-block;
+    background-color:#F44336;
+    padding: 0px 12px 0px 12px;
+    color:white;
+    border-radius:4px;
+    margin-left:10px;
 }
 #logo
 {
     height:auto;
     width:60px;
+}
+#search
+{
+    float:right;
+    display: inline-block
 }
 #logo:hover
 {
@@ -81,12 +122,11 @@ input[type="text"] {
   border-bottom: solid 2px #c9c9c9;
   transition: border 0.3s;
   background-color: transparent;
-  color:white;
 }
  input[type="text"]:focus,
  input[type="text"].focus {
   border-bottom: solid 2px #969696;
-    outline-color: white;
+     outline-color: white;
 }
 /*#user
 {
