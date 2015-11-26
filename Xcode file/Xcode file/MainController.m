@@ -8,6 +8,9 @@
 
 #import "MainController.h"
 #import "CreateEventPage.h"
+#import "Event.h"
+#import "ViewEvent.h"
+#import <Parse/Parse.h>
 
 @interface MainController ()
 @property (strong, nonatomic) IBOutlet UITableView *eventsTable;
@@ -15,14 +18,45 @@
 
 @end
 
-@implementation MainController
-@synthesize currentUser,eventsTable;
+@implementation MainController{
+    bool AddedEvents;
+}
+@synthesize currentUser;
+@synthesize eventsTable;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     eventsTable.delegate = self;
     eventsTable.dataSource = self;
+    AddedEvents = NO;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:@"nsUser"];
+    currentUser = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    
+    if(currentUser.eventsCreated != NULL){
+        AddedEvents = YES;
+    }
+    NSMutableArray *tempFriends = [[NSMutableArray alloc] init];
+    if ([currentUser.friendsArray count] != 0) {
+    for (int i; i< [currentUser.friendsArray count] ; i++) {
+        PFQuery *query = [PFQuery queryWithClassName:@"User"];
+        PFObject *friend =  [query getObjectWithId:currentUser.friendsArray[i]];
+        [tempFriends addObject:friend[@"nick"]];
+        
+        
+        
+    }
+        
+        currentUser.friendsArray = tempFriends;
+    }
+    
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [eventsTable reloadData];
+    if(currentUser.eventsCreated != NULL){
+        AddedEvents = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +70,12 @@
     if ([@"newEventSegue" isEqualToString:segue.identifier]) {
         CreateEventPage *controller = (CreateEventPage *) segue.destinationViewController;
         controller.currentUser = sender;
+    } else if ([@"toViewEvent" isEqualToString:segue.identifier]) {
+        ViewEvent *controller = (ViewEvent *) segue.destinationViewController;
+        controller.event = sender;
     }
+
+    
 }
 
 -(IBAction)returnHome:(UIStoryboardSegue *)segue {
@@ -46,7 +85,6 @@
     }
 }
 
-
 //Table view methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -55,37 +93,34 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    if(currentUser.eventsInvited != nil){
-    return [currentUser.eventsCreated count];
+    if ([currentUser.eventsCreated count] == NULL) {
+        return 1;
     }
-    return 1;
+    
+    return [currentUser.eventsCreated count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventsList"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeSlideViewCell"];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] init];
     }
-    
-    cell.textLabel.text = @"Test";//[currentUser.eventsCreated objectAtIndex:indexPath.row] ;
+    if(currentUser.eventsCreated == NULL){
+    cell.textLabel.text = @"Add an Event!"; //[nameTableArray objectAtIndex:indexPath.row] ;
+    }else{
+        Event *tempEvent = currentUser.eventsCreated[indexPath.row];
+        cell.textLabel.text = tempEvent.nameOfEvent;
+    }
+
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (AddedEvents) {
+        [self performSegueWithIdentifier:@"toViewEvent" sender:currentUser.eventsCreated[indexPath.row]];
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

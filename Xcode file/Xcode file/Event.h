@@ -19,6 +19,8 @@
 @property NSMutableArray *friendsGoing;
 @property NSMutableArray *friendsNotGoing;
 @property NSMutableArray *friendsMightGo;
+@property NSString *location;
 @property User *creatorOfEvent;
 
++(Event *)createEvent:(NSString *)eventName des:(NSString *)description eventDate:(NSDate *)date eventTime:(NSInteger *)time PossibleAttendee:(NSMutableArray *)myFriends creator:(User *)event_Creater location:(NSString *)location;
 @end
