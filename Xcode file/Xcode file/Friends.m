@@ -9,6 +9,25 @@
 #import "Friends.h"
 
 @implementation Friends
+@synthesize friendUsername,friendID;
+
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    //Encode properties, other class variables, etc
+    [encoder encodeObject:self.friendID forKey:@"friendID"];
+    [encoder encodeObject:self.friendUsername forKey:@"friendUsername"];
+
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if((self = [super init])) {
+        // decode properties, other class vars
+        self.friendID = [decoder decodeObjectForKey:@"friendID"];
+        self.friendUsername = [decoder decodeObjectForKey:@"friendUsername"];
+
+    }
+    return self;
+}
 
 
 @end

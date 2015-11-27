@@ -43,7 +43,6 @@
 		D5696AB51BF766030084D0F3 /* parse-library-1.9.1 in Resources */ = {isa = PBXBuildFile; fileRef = D5696AB41BF766030084D0F3 /* parse-library-1.9.1 */; };
 		D5696AB81BF76DAE0084D0F3 /* ViewEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D5696AB71BF76DAE0084D0F3 /* ViewEvent.m */; };
 		D5696ABA1BF76E8D0084D0F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5696AB91BF76E8D0084D0F3 /* MapKit.framework */; };
-		D5696ABC1BF778D60084D0F3 /* b_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5696ABB1BF778D60084D0F3 /* b_icon.jpg */; };
 		D5954D8E1C04362700D5A626 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D801C04362700D5A626 /* AMSlideMenuContentSegue.m */; };
 		D5954D8F1C04362700D5A626 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D821C04362700D5A626 /* AMSlideMenuLeftMenuSegue.m */; };
 		D5954D901C04362700D5A626 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D841C04362700D5A626 /* AMSlideMenuLeftTableViewController.m */; };
@@ -54,6 +53,11 @@
 		D5954D971C04366800D5A626 /* SlideMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954D961C04366800D5A626 /* SlideMenuVC.m */; };
 		D5954D991C0445FD00D5A626 /* settings-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D5954D981C0445FD00D5A626 /* settings-menu.png */; };
 		D5954DA41C04E26E00D5A626 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954DA31C04E26E00D5A626 /* ProfileView.m */; };
+		D5954DA91C0511F800D5A626 /* EditProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5954DA81C0511F800D5A626 /* EditProfileView.m */; };
+		D5954DB01C067DF100D5A626 /* b_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5954DAF1C067DF100D5A626 /* b_icon.jpg */; };
+		D5954DB21C06804500D5A626 /* b_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5954DB11C06804500D5A626 /* b_icon.png */; };
+		D5954DB41C06996F00D5A626 /* 29.png in Resources */ = {isa = PBXBuildFile; fileRef = D5954DB31C06996F00D5A626 /* 29.png */; };
+		D5954DB81C069AC700D5A626 /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = D5954DB71C069AC700D5A626 /* 58.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +129,6 @@
 		D5696AB61BF76DAE0084D0F3 /* ViewEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewEvent.h; sourceTree = "<group>"; };
 		D5696AB71BF76DAE0084D0F3 /* ViewEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewEvent.m; sourceTree = "<group>"; };
 		D5696AB91BF76E8D0084D0F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		D5696ABB1BF778D60084D0F3 /* b_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b_icon.jpg; path = ../../site/images/b_icon.jpg; sourceTree = "<group>"; };
 		D5954D7F1C04362700D5A626 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
 		D5954D801C04362700D5A626 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
 		D5954D811C04362700D5A626 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
@@ -146,6 +149,12 @@
 		D5954D981C0445FD00D5A626 /* settings-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-menu.png"; sourceTree = "<group>"; };
 		D5954DA21C04E26E00D5A626 /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
 		D5954DA31C04E26E00D5A626 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
+		D5954DA71C0511F800D5A626 /* EditProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileView.h; sourceTree = "<group>"; };
+		D5954DA81C0511F800D5A626 /* EditProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileView.m; sourceTree = "<group>"; };
+		D5954DAF1C067DF100D5A626 /* b_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b_icon.jpg; sourceTree = "<group>"; };
+		D5954DB11C06804500D5A626 /* b_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_icon.png; sourceTree = "<group>"; };
+		D5954DB31C06996F00D5A626 /* 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29.png; sourceTree = "<group>"; };
+		D5954DB71C069AC700D5A626 /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +233,6 @@
 				2DFADA9E1BF6F26C008289E5 /* Main.storyboard */,
 				2DFADAA41BF6F26C008289E5 /* Assets.xcassets */,
 				2DFADAA61BF6F26C008289E5 /* LaunchScreen.storyboard */,
-				2DFADAA91BF6F26C008289E5 /* Info.plist */,
-				2DFADAA11BF6F26C008289E5 /* Xcode_file.xcdatamodeld */,
 				2DFADA951BF6F26C008289E5 /* Supporting Files */,
 			);
 			path = "Xcode file";
@@ -234,6 +241,11 @@
 		2DFADA951BF6F26C008289E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D5954DB71C069AC700D5A626 /* 58.png */,
+				D5954DB31C06996F00D5A626 /* 29.png */,
+				D5954DB11C06804500D5A626 /* b_icon.png */,
+				2DFADAA91BF6F26C008289E5 /* Info.plist */,
+				2DFADAA11BF6F26C008289E5 /* Xcode_file.xcdatamodeld */,
 				2DFADA961BF6F26C008289E5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -274,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				D5954DA11C04E24400D5A626 /* MainViews */,
-				D5954DA01C04E23100D5A626 /* SlideMenuViews */,
+				D5954DA01C04E23100D5A626 /* ExtraViews */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -308,7 +320,7 @@
 		D5696AAD1BF742810084D0F3 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				D5696ABB1BF778D60084D0F3 /* b_icon.jpg */,
+				D5954DAF1C067DF100D5A626 /* b_icon.jpg */,
 				D5696AAB1BF7427C0084D0F3 /* p_icon.jpg */,
 				D5954D981C0445FD00D5A626 /* settings-menu.png */,
 			);
@@ -347,13 +359,15 @@
 			name = AMSlideMenu;
 			sourceTree = "<group>";
 		};
-		D5954DA01C04E23100D5A626 /* SlideMenuViews */ = {
+		D5954DA01C04E23100D5A626 /* ExtraViews */ = {
 			isa = PBXGroup;
 			children = (
 				D5954DA21C04E26E00D5A626 /* ProfileView.h */,
 				D5954DA31C04E26E00D5A626 /* ProfileView.m */,
+				D5954DA71C0511F800D5A626 /* EditProfileView.h */,
+				D5954DA81C0511F800D5A626 /* EditProfileView.m */,
 			);
-			name = SlideMenuViews;
+			name = ExtraViews;
 			sourceTree = "<group>";
 		};
 		D5954DA11C04E24400D5A626 /* MainViews */ = {
@@ -479,13 +493,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5954DB81C069AC700D5A626 /* 58.png in Resources */,
+				D5954DB41C06996F00D5A626 /* 29.png in Resources */,
 				2DFADAA81BF6F26C008289E5 /* LaunchScreen.storyboard in Resources */,
-				D5696ABC1BF778D60084D0F3 /* b_icon.jpg in Resources */,
 				2DFADAA51BF6F26C008289E5 /* Assets.xcassets in Resources */,
+				D5954DB01C067DF100D5A626 /* b_icon.jpg in Resources */,
 				D5954D991C0445FD00D5A626 /* settings-menu.png in Resources */,
 				D5696AAC1BF7427C0084D0F3 /* p_icon.jpg in Resources */,
 				D5696AB51BF766030084D0F3 /* parse-library-1.9.1 in Resources */,
 				2DFADAA01BF6F26C008289E5 /* Main.storyboard in Resources */,
+				D5954DB21C06804500D5A626 /* b_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +538,7 @@
 				D5954D921C04362700D5A626 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				D5954D971C04366800D5A626 /* SlideMenuVC.m in Sources */,
 				2DFADA9A1BF6F26C008289E5 /* AppDelegate.m in Sources */,
+				D5954DA91C0511F800D5A626 /* EditProfileView.m in Sources */,
 				D53AFBAE1BF6FA3F0088C5EE /* MainController.m in Sources */,
 				D53AFBB41BF714AE0088C5EE /* CreateEventPage.m in Sources */,
 				2DFADA971BF6F26C008289E5 /* main.m in Sources */,

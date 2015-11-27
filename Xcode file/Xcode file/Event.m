@@ -25,7 +25,7 @@
             //int highestValue=(int)[eventToRemoveFrom.friendsInvited count];
             for(i=(int)[eventToRemoveFrom.friendsInvited count]-1;i>=0;i--){
                 Friends *tempFriend =  eventToRemoveFrom.friendsInvited[i];
-                if(friendToRemove.FriendID == tempFriend.FriendID){
+                if(friendToRemove.friendID == tempFriend.friendID){
                     [eventToRemoveFrom.friendsInvited removeObject:tempFriend];
                 }
             }

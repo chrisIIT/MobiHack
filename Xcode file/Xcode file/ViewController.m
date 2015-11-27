@@ -124,4 +124,8 @@
     [UIView commitAnimations];
 }
 
+-(IBAction)logout:(UIStoryboardSegue *)segue {
+    
+}
+
 @end

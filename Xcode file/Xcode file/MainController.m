@@ -37,19 +37,19 @@
     if(currentUser.eventsCreated != NULL){
         AddedEvents = YES;
     }
-    NSMutableArray *tempFriends = [[NSMutableArray alloc] init];
-    if ([currentUser.friendsArray count] != 0) {
-    for (int i; i< [currentUser.friendsArray count] ; i++) {
-        PFQuery *query = [PFQuery queryWithClassName:@"User"];
-        PFObject *friend =  [query getObjectWithId:currentUser.friendsArray[i]];
-        [tempFriends addObject:friend[@"nick"]];
-        
-        
-        
-    }
-        
-        currentUser.friendsArray = tempFriends;
-    }
+//    NSMutableArray *tempFriends = [[NSMutableArray alloc] init];
+//    if ([currentUser.friendsArray count] != 0) {
+//    for (int i; i< [currentUser.friendsArray count] ; i++) {
+//        PFQuery *query = [PFQuery queryWithClassName:@"User"];
+//        PFObject *friend =  [query getObjectWithId:currentUser.friendsArray[i]];
+//        [tempFriends addObject:friend[@"nick"]];
+//        
+//        
+//        
+//    }
+//    
+//        currentUser.friendsArray = tempFriends;
+//    }
     
 }
 -(void)viewWillAppear:(BOOL)animated{

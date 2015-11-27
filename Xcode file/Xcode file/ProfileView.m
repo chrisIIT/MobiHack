@@ -8,6 +8,7 @@
 
 #import "ProfileView.h"
 #import "User.h"
+#import "Friends.h"
 
 @interface ProfileView ()
 @property IBOutlet UITableView *friendsTable;
@@ -38,6 +39,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)sendRequestPressed:(id)sender {
+    [self findFriend:friendsSearch.text];
 }
 
 
@@ -87,6 +89,99 @@
 //    
 //    return YES;
 //}
+
+-(void) findFriend: (NSString *) userNameSearch{
+    PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+    [query whereKey:@"username" equalTo:userNameSearch];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
+            // Do something with the found objects
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:userNameSearch
+                                          message:@"User was found."
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* addButton = [UIAlertAction
+                                       actionWithTitle:@"Add"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action)
+                                       {
+                                          
+                                           /*
+                                                set up push notifications
+                                                Add code to allow for users to accept friend requests
+                                                change code so user isnt auto added when user is add to searching user
+                                            */
+                                           PFObject *friendObject = objects[0];
+                                           Friends *newFriend = [[Friends alloc] init];
+                                           newFriend.friendID = friendObject.objectId;
+                                           newFriend.friendUsername = userNameSearch;
+                                           
+                                           if(currentUser.friendsArray != NULL){
+                                               [currentUser.friendsArray addObject:newFriend];
+                                           }
+                                           else{
+                                               currentUser.friendsArray = [[NSMutableArray alloc] init];
+                                               [currentUser.friendsArray addObject:newFriend];
+                                           }
+                                           NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:currentUser];
+                                           NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                                           [defaults setObject:encodedObject forKey:@"nsUser"];
+                                           [defaults synchronize];
+                                           
+                                           [alert dismissViewControllerAnimated:YES completion:nil];
+                                           
+                                       }];
+            
+            UIAlertAction* cancelButton = [UIAlertAction
+                                        actionWithTitle:@"Cancel"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action)
+                                        {
+                                            //Handel your yes please button action here
+                                            [alert dismissViewControllerAnimated:YES completion:nil];
+                                            
+                                        }];
+
+            
+            
+            [alert addAction:addButton];
+            [alert addAction:cancelButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+
+        } else {
+            // Log details of the failure
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"Error!"
+                                          message:@"Couldn't Connect to Network"
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* okButton = [UIAlertAction
+                                       actionWithTitle:@"Okay"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action)
+                                       {
+                                           //Handel your yes please button action here
+                                           [alert dismissViewControllerAnimated:YES completion:nil];
+                                           
+                                       }];
+            
+            
+            [alert addAction:okButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+
+        }
+    }];
+    
+}
+
+-(IBAction)backToProfile:(UIStoryboardSegue *)segue {
+    
+}
 
 
 @end

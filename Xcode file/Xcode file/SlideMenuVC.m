@@ -45,6 +45,8 @@
             break;
         case 4:
             //logout segue
+            [PFUser logOut];
+            [self performSegueWithIdentifier:@"logoutSeque" sender: NULL];
             break;
         default:
             break;

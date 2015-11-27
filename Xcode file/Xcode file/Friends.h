@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Friends : NSObject
-@property NSInteger *FriendID;
-@property NSString *FriendName;
+@property NSString *friendID;
+@property NSString *friendUsername;
 
 @end

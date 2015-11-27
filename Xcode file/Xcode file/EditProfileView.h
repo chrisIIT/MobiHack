@@ -1,5 +1,5 @@
 //
-//  ProfileView.h
+//  EditProfileView.h
 //  Xcode file
 //
 //  Created by Alex Thompson on 11/24/15.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
 
-@interface ProfileView : UIViewController
+@interface EditProfileView : UIViewController
 
 @end
